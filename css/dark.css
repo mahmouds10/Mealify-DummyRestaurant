@@ -1,0 +1,48 @@
+:root:has(.mood input:checked){
+    --primary-hue: 35;
+    --primary-lightness: 44%;
+    --primary-saturation: 72%;
+    --light-hue: 0;
+    --light-saturation: 0%;
+    --light-lightness: 9%;
+    --color-default: #fff;
+    --color-secondary: #fff;
+    --color-tertiary: #9f9f9f;
+    --color-light-grey: #252525;
+}
+body:has(.home:target) .home-link{
+    color: var(--color-default);
+}
+body:has(.home:target) .home-link::before{
+    width: 100%;
+}
+body:has(.chefs:target) .chefs-link{
+    color: var(--color-default);
+}
+body:has(.chefs:target) .chefs-link::before{
+    width: 100%;
+}
+body:has(.gallery:target) .gallery-link{
+    color: var(--color-default);
+}
+body:has(.gallery:target) .gallery-link::before{
+    width: 100%;
+}
+body:has(.contact:target) .contact-link{
+    color: var(--color-default);
+}
+body:has(.contact:target) .contact-link::before{
+    width: 100%;
+}
+body:has(.mood input:checked) .mood .light {
+    display: block;
+}
+body:has(.mood input:checked) .mood .dark {
+    display: none;
+}
+body:not(:has(:target)) .home-link{
+    color: var(--color-default);
+}
+body:not(:has(:target)) .home-link::before{
+    width: 100%;
+}
